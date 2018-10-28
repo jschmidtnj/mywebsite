@@ -59,3 +59,12 @@ typings/
 
 # next.js build output
 .next
+
+# public directory
+public/
+
+# compiles sass
+compiled/
+
+# hoodie stuff
+.hoodie/
