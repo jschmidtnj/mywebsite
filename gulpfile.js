@@ -75,6 +75,13 @@ gulp.task('vendor', function () {
   ])
     .pipe(gulp.dest('./public/vendor/simple-line-icons/css'))
 
+  // hoodie
+  /*
+  gulp.src([
+    'node_modules/hoodie/**'
+  ])
+  */
+
 });
 
 // copy vendor code
