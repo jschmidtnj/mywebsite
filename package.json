@@ -8,8 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "run-gulp": "gulp dev",
     "run-hoodie": "hoodie",
-    "start": "concurrently --kill-others \"npm run run-gulp\" \"npm run run-hoodie\"",
-    "build": "gulp --production"
+    "start": "concurrently --kill-others \"cp src/particles.json public/particles.json && npm run run-gulp\" \"npm run run-hoodie\"",
+    "build": "cp src/particles.json public/particles.json && gulp --production",
+    "start-hoodie": "hoodie"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "hoodie": "^28.2.6",
     "jquery": "3.3.1",
     "jquery.easing": "^1.4.1",
+    "particles.js": "^2.0.0",
     "requirejs": "^2.3.6",
     "simple-line-icons": "^2.4.1"
   },

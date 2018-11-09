@@ -43,37 +43,37 @@ gulp.task('vendor', function () {
     '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
     '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
   ])
-    .pipe(gulp.dest('./public/vendor/bootstrap'))
+    .pipe(gulp.dest('./public/vendor/bootstrap'));
 
   // Font Awesome 5
   gulp.src([
     './node_modules/@fortawesome/**/*'
   ])
-    .pipe(gulp.dest('./public/vendor'))
+    .pipe(gulp.dest('./public/vendor'));
 
   // jQuery
   gulp.src([
     './node_modules/jquery/dist/*',
     '!./node_modules/jquery/dist/core.js'
   ])
-    .pipe(gulp.dest('./public/vendor/jquery'))
+    .pipe(gulp.dest('./public/vendor/jquery'));
 
   // jQuery Easing
   gulp.src([
     './node_modules/jquery.easing/*.js'
   ])
-    .pipe(gulp.dest('./public/vendor/jquery-easing'))
+    .pipe(gulp.dest('./public/vendor/jquery-easing'));
 
   // Simple Line Icons
   gulp.src([
     './node_modules/simple-line-icons/fonts/**',
   ])
-    .pipe(gulp.dest('./public/vendor/simple-line-icons/fonts'))
+    .pipe(gulp.dest('./public/vendor/simple-line-icons/fonts'));
 
   gulp.src([
     './node_modules/simple-line-icons/css/**',
   ])
-    .pipe(gulp.dest('./public/vendor/simple-line-icons/css'))
+    .pipe(gulp.dest('./public/vendor/simple-line-icons/css'));
 
   // hoodie
   /*
@@ -81,6 +81,11 @@ gulp.task('vendor', function () {
     'node_modules/hoodie/**'
   ])
   */
+
+  gulp.src([
+    './node_modules/particles.js/**',
+  ])
+    .pipe(gulp.dest('./public/vendor/particles.js'));
 
 });
 
@@ -166,4 +171,5 @@ gulp.task('dev', ['css', 'js', 'browserSync'], function () {
   });
   gulp.watch('./src/img/*', ['img']);
   gulp.watch('package.json', ['vendor']);
+  gulp.watch('gulpfile.js', ['vendor']);
 });
