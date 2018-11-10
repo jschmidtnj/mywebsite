@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "run-gulp": "gulp dev",
     "run-hoodie": "hoodie",
-    "start": "concurrently --kill-others \"cp src/particles.json public/particles.json && npm run run-gulp\" \"npm run run-hoodie\"",
-    "build": "cp src/particles.json public/particles.json && gulp --production",
+    "start": "concurrently --kill-others \"npm run run-gulp\" \"npm run run-hoodie\"",
+    "build": "gulp --production",
     "start-hoodie": "hoodie"
   },
   "repository": {

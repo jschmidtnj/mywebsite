@@ -19,13 +19,14 @@ var banner = ['/*!\n',
 ].join('');
 
 // get html copied
-gulp.task('html', function () {
-  gulp.src([
-    './src/html/*.html'
-  ]).pipe(gulp.dest('./public'));
-});
+gulp.src([
+  './src/html/*.html'
+]).pipe(gulp.dest('./public'));
 
-gulp.start('html');
+// get particles config copied
+gulp.src([
+  './src/particles.json'
+]).pipe(gulp.dest('./public'));
 
 // get images copied
 gulp.task('img', function () {
@@ -39,10 +40,25 @@ gulp.start('img');
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function () {
 
+  // Font Awesome 5
+  gulp.src([
+      './node_modules/@fortawesome/**/*'
+    ])
+    .pipe(gulp.dest('./public/vendor'));
+
+  // Simple Line Icons
+  gulp.src([
+      './node_modules/simple-line-icons/fonts/**',
+    ])
+    .pipe(gulp.dest('./public/vendor/simple-line-icons/fonts'));
+
+  gulp.src([
+      './node_modules/simple-line-icons/css/**',
+    ])
+    .pipe(gulp.dest('./public/vendor/simple-line-icons/css'));
+
   var css = [
-    './node_modules/bootstrap/dist/css/bootstrap.min.css',
-    './node_modules/@fortawesome/fontawesome-free/css/all.min.css',
-    './node_modules/simple-line-icons/fonts/css/simple-line-icons.css'
+    './node_modules/bootstrap/dist/css/bootstrap.min.css'
   ];
   var js = [
     './node_modules/jquery/dist/jquery.min.js',
@@ -54,12 +70,12 @@ gulp.task('vendor', function () {
   gulp.src(js)
     .pipe(concat('vendor.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./public/js/'));
+    .pipe(gulp.dest('./public/vendor'));
 
   gulp.src(css)
     .pipe(concat('vendor.min.css'))
     .pipe(cleanCSS())
-    .pipe(gulp.dest('./public/css/'));
+    .pipe(gulp.dest('./public/vendor'));
 });
 
 // copy vendor code
@@ -140,6 +156,11 @@ gulp.task('dev', ['css', 'js', 'browserSync'], function () {
   gulp.watch('./src/html/*.html', function () {
     gulp.src([
       './src/html/*.html'
+    ]).pipe(gulp.dest('./public')).on('end', browserSync.reload);
+  });
+  gulp.watch('./src/particles.json', function () {
+    gulp.src([
+      './src/particles.json'
     ]).pipe(gulp.dest('./public')).on('end', browserSync.reload);
   });
   gulp.watch('./src/img/*', ['img']);
