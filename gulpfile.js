@@ -7,6 +7,7 @@ var uglify = require('gulp-uglify');
 var autoprefixer = require('gulp-autoprefixer');
 var pkg = require('./package.json');
 var browserSync = require('browser-sync').create();
+var concat = require('gulp-concat');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -18,7 +19,7 @@ var banner = ['/*!\n',
 ].join('');
 
 // get html copied
-gulp.task('html', function() {
+gulp.task('html', function () {
   gulp.src([
     './src/html/*.html'
   ]).pipe(gulp.dest('./public'));
@@ -27,7 +28,7 @@ gulp.task('html', function() {
 gulp.start('html');
 
 // get images copied
-gulp.task('img', function() {
+gulp.task('img', function () {
   gulp.src([
     './src/img/*'
   ]).pipe(gulp.dest('./public/img'));
@@ -37,56 +38,28 @@ gulp.start('img');
 
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function () {
-  // Bootstrap
-  gulp.src([
-    './node_modules/bootstrap/dist/**/*',
-    '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
-    '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
-  ])
-    .pipe(gulp.dest('./public/vendor/bootstrap'));
 
-  // Font Awesome 5
-  gulp.src([
-    './node_modules/@fortawesome/**/*'
-  ])
-    .pipe(gulp.dest('./public/vendor'));
+  var css = [
+    './node_modules/bootstrap/dist/css/bootstrap.min.css',
+    './node_modules/@fortawesome/fontawesome-free/css/all.min.css',
+    './node_modules/simple-line-icons/fonts/css/simple-line-icons.css'
+  ];
+  var js = [
+    './node_modules/jquery/dist/jquery.min.js',
+    './node_modules/bootstrap/dist/js/bootstrap.min.js',
+    './node_modules/jquery.easing/jquery.easing.min.js',
+    './node_modules/particles.js/particles.js'
+  ];
 
-  // jQuery
-  gulp.src([
-    './node_modules/jquery/dist/*',
-    '!./node_modules/jquery/dist/core.js'
-  ])
-    .pipe(gulp.dest('./public/vendor/jquery'));
+  gulp.src(js)
+    .pipe(concat('vendor.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./public/js/'));
 
-  // jQuery Easing
-  gulp.src([
-    './node_modules/jquery.easing/*.js'
-  ])
-    .pipe(gulp.dest('./public/vendor/jquery-easing'));
-
-  // Simple Line Icons
-  gulp.src([
-    './node_modules/simple-line-icons/fonts/**',
-  ])
-    .pipe(gulp.dest('./public/vendor/simple-line-icons/fonts'));
-
-  gulp.src([
-    './node_modules/simple-line-icons/css/**',
-  ])
-    .pipe(gulp.dest('./public/vendor/simple-line-icons/css'));
-
-  // hoodie
-  /*
-  gulp.src([
-    'node_modules/hoodie/**'
-  ])
-  */
-
-  gulp.src([
-    './node_modules/particles.js/**',
-  ])
-    .pipe(gulp.dest('./public/vendor/particles.js'));
-
+  gulp.src(css)
+    .pipe(concat('vendor.min.css'))
+    .pipe(cleanCSS())
+    .pipe(gulp.dest('./public/css/'));
 });
 
 // copy vendor code
@@ -105,17 +78,17 @@ gulp.task('css:compile', function () {
     .pipe(header(banner, {
       pkg: pkg
     }))
-    .pipe(gulp.dest('./src/scss/compiled'))
+    .pipe(gulp.dest('./src/scss/compiled'));
 });
 
 // Minify CSS
 gulp.task('css:minify', ['css:compile'], function () {
-  return gulp.src([
-    './src/scss/compiled/*.css',
-    './src/css/*.css',
-    '!./src/scss/compiled/*.min.css',
-    '!./src/css/*.min.css'
-  ])
+  gulp.src([
+      './src/scss/compiled/*.css',
+      './src/css/*.css',
+      '!./src/scss/compiled/*.min.css',
+      '!./src/css/*.min.css'
+    ])
     .pipe(cleanCSS())
     .pipe(rename({
       suffix: '.min'
@@ -130,9 +103,9 @@ gulp.task('css', ['css:compile', 'css:minify']);
 // Minify JavaScript
 gulp.task('js:minify', function () {
   return gulp.src([
-    './src/js/*.js',
-    '!./src/js/*.min.js'
-  ])
+      './src/js/*.js',
+      '!./src/js/*.min.js'
+    ])
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min'
@@ -164,12 +137,11 @@ gulp.task('dev', ['css', 'js', 'browserSync'], function () {
   gulp.watch('./src/scss/*.scss', ['css']);
   gulp.watch('./src/js/*.js', ['js']);
   gulp.watch('./src/css/*.css', ['css']);
-  gulp.watch('./src/html/*.html', function() {
+  gulp.watch('./src/html/*.html', function () {
     gulp.src([
       './src/html/*.html'
     ]).pipe(gulp.dest('./public')).on('end', browserSync.reload);
   });
   gulp.watch('./src/img/*', ['img']);
-  gulp.watch('package.json', ['vendor']);
   gulp.watch('gulpfile.js', ['vendor']);
 });
