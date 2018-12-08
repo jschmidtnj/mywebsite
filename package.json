@@ -12,9 +12,9 @@
     "gatsby-plugin-netlify-cms": "^3.0.0",
     "gatsby-plugin-purgecss": "^2.4.0",
     "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-remark-copy-linked-files": "^2.0.6",
     "gatsby-plugin-sass": "^2.0.1",
-    "gatsby-plugin-sharp": "^2.0.5",
+    "gatsby-plugin-sharp": "^2.0.15",
+    "gatsby-remark-copy-linked-files": "^2.0.6",
     "gatsby-remark-images": "^3.0.0",
     "gatsby-remark-relative-images": "^0.2.0",
     "gatsby-source-filesystem": "^2.0.1",
@@ -46,8 +46,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "connect": "^3.6.6",
     "prettier": "^1.7.4",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "serve-static": "^1.13.2"
   },
   "repository": {
     "type": "git",
