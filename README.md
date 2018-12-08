@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Gatsby + Netlify Website
 
 ## Notes
