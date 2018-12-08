@@ -18,7 +18,7 @@ export const ProductPageTemplate = ({
   fullImage,
   pricing,
 }) => (
-  /* jshint ignore:start */
+  
   <section className="section section--gradient">
     <div className="container">
       <div className="section">
@@ -107,7 +107,7 @@ export const ProductPageTemplate = ({
       </div>
     </div>
   </section>
-  /* jshint ignore:end */
+  
 )
 
 ProductPageTemplate.propTypes = {
@@ -136,7 +136,7 @@ ProductPageTemplate.propTypes = {
 
 const ProductPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  /* jshint ignore:start */
+  
   return (
     <Layout>
       <ProductPageTemplate
@@ -152,7 +152,7 @@ const ProductPage = ({ data }) => {
       />
     </Layout>
   )
-  /* jshint ignore:end */
+  
 }
 
 ProductPage.propTypes = {

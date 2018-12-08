@@ -2,6 +2,7 @@ import React from "react";
 import Layout from '../../components/Layout'
 
 export default () => (
+  
   <Layout>
         <section className="section">
           <div className="container">
@@ -12,4 +13,5 @@ export default () => (
           </div>
           </section>
   </Layout>
+  
 );

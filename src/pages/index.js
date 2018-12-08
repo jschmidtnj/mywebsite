@@ -9,7 +9,7 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      /* jshint ignore:start */
+      
       <Layout>
         <section className="section">
           <div className="container">
@@ -43,7 +43,7 @@ export default class IndexPage extends React.Component {
           </div>
         </section>
       </Layout>
-      /* jshint ignore:end */
+      
     )
   }
 }

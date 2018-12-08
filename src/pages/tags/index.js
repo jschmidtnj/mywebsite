@@ -7,6 +7,7 @@ import Layout from '../../components/Layout'
 const TagsPage = ({
   data: { allMarkdownRemark: { group }, site: { siteMetadata: { title } } },
 }) => (
+  
   <Layout>
     <section className="section">
       <Helmet title={`Tags | ${title}`} />
@@ -31,6 +32,7 @@ const TagsPage = ({
       </div>
     </section>
   </Layout>
+  
 )
 
 export default TagsPage

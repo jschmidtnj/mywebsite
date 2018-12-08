@@ -6,7 +6,7 @@ import Content, { HTMLContent } from '../components/Content'
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
-  /* jshint ignore:start */
+  
   return (
     <section className="section section--gradient">
       <div className="container">
@@ -23,7 +23,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       </div>
     </section>
   )
-  /* jshint ignore:end */
+  
 }
 
 AboutPageTemplate.propTypes = {
@@ -34,7 +34,7 @@ AboutPageTemplate.propTypes = {
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data
-  /* jshint ignore:start */
+  
   return (
     <Layout>
       <AboutPageTemplate
@@ -44,7 +44,7 @@ const AboutPage = ({ data }) => {
       />
     </Layout>
   )
-  /* jshint ignore:end */
+  
 }
 
 AboutPage.propTypes = {

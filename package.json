@@ -1,8 +1,9 @@
 {
   "name": "mywebsite",
   "description": "Gatsby, and Netlify CMS project",
-  "version": "1.1.3",
+  "version": "1.0.0",
   "author": "Joshua Schmidt",
+  "private": false,
   "dependencies": {
     "bulma": "^0.7.0",
     "gatsby": "^2.0.0",
@@ -47,5 +48,13 @@
   "devDependencies": {
     "prettier": "^1.7.4",
     "rimraf": "^2.6.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jschmidtnj/mywebsite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jschmidtnj/mywebsite/issues"
+  },
+  "homepage": "https://github.com/jschmidtnj/mywebsite#readme"
 }

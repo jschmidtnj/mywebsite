@@ -1,4 +1,8 @@
-# Gatsby + Netlify CMS Starter
+# Gatsby + Netlify Website
+
+## Notes
+
+use vs code jsx extension (look it up) for syntax highlighting. disable jshint because it doesn't work (as of Dec 7 2018).
 
 **Note:** This starter uses the [Gatsby v2 Beta](https://www.gatsbyjs.org/blog/2018-06-16-announcing-gatsby-v2-beta-launch/).
 

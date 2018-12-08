@@ -7,13 +7,13 @@ class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map(post => (
-      /* jshint ignore:start */
+      
       <li key={post.node.fields.slug}>
         <Link to={post.node.fields.slug}>
           <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
         </Link>
       </li>
-      /* jshint ignore:end */
+      
     ))
     const tag = this.props.pageContext.tag
     const title = this.props.data.site.siteMetadata.title
@@ -23,7 +23,7 @@ class TagRoute extends React.Component {
     } tagged with “${tag}”`
 
     return (
-      /* jshint ignore:start */
+      
       <Layout>
         <section className="section">
           <Helmet title={`${tag} | ${title}`} />
@@ -43,7 +43,7 @@ class TagRoute extends React.Component {
           </div>
         </section>
       </Layout>
-      /* jshint ignore:end */
+      
     )
   }
 }

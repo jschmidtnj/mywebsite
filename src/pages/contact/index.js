@@ -14,10 +14,13 @@ export default class Index extends React.Component {
     this.state = { isValidated: false };
   }
 
+  
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
+  
 
+  
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
@@ -32,9 +35,11 @@ export default class Index extends React.Component {
       .then(() => navigate(form.getAttribute("action")))
       .catch(error => alert(error));
   };
+  
 
   render() {
     return (
+      
       <Layout>
         <section className="section">
           <div className="container">
@@ -82,6 +87,7 @@ export default class Index extends React.Component {
         </div>
         </section>
       </Layout>
+      
     );
   }
 }

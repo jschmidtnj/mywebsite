@@ -16,7 +16,7 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
 
-  /* jshint ignore:start */
+  
   return (
     <section className="section">
       {helmet || ''}
@@ -45,7 +45,7 @@ export const BlogPostTemplate = ({
       </div>
     </section>
   )
-  /* jshint ignore:end */
+  
 }
 
 BlogPostTemplate.propTypes = {
@@ -58,7 +58,7 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-  /* jshint ignore:start */
+  
   return (
     <Layout>
       <BlogPostTemplate
@@ -78,7 +78,7 @@ const BlogPost = ({ data }) => {
       />
     </Layout>
   )
-  /* jshint ignore:end */
+  
 }
 
 BlogPost.propTypes = {

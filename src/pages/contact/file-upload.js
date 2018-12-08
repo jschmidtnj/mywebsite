@@ -1,6 +1,6 @@
 import React from "react";
 import { navigate } from "gatsby-link";
-import Layout from '../../components/Layout'
+import Layout from '../../components/Layout';
 
 function encode(data) {
   const formData = new FormData();
@@ -18,14 +18,19 @@ export default class Contact extends React.Component {
     this.state = {};
   }
 
+  
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
+  
 
+  
   handleAttachment = e => {
     this.setState({ [e.target.name]: e.target.files[0] });
   };
+  
 
+  
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
@@ -39,9 +44,11 @@ export default class Contact extends React.Component {
       .then(() => navigate(form.getAttribute("action")))
       .catch(error => alert(error));
   };
+  
 
   render() {
     return (
+
       <Layout>
         <section className="section">
           <div className="container">
@@ -94,6 +101,7 @@ export default class Contact extends React.Component {
         </div>
       </section>
       </Layout>
+      
     );
   }
 }

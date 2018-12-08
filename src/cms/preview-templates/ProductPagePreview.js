@@ -13,6 +13,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
   const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : []
 
   return (
+    
     <ProductPageTemplate
       image={entry.getIn(['data', 'image'])}
       title={entry.getIn(['data', 'title'])}
@@ -43,6 +44,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
         plans: pricingPlans,
       }}
     />
+    
   )
 }
 

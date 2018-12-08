@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar'
 import './all.sass'
 
 const TemplateWrapper = ({ children }) => (
+  
   <StaticQuery
     query={graphql`
       query HeadingQuery {
@@ -41,6 +42,7 @@ const TemplateWrapper = ({ children }) => (
       </div>
     )}
   />
+  
 )
 
 export default TemplateWrapper

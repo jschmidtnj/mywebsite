@@ -62,7 +62,7 @@ const Navbar = class extends React.Component {
       <div className="navbar-end has-text-centered">
         <a
           className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
+          href="https://github.com/jschmidtnj/mywebsite"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -74,6 +74,7 @@ const Navbar = class extends React.Component {
       </div>
     </div>
   </nav>
+  
   )}
 }
 

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { v4 } from 'uuid'
 
 const Testimonials = ({ testimonials }) => (
+  
   <div>
     {testimonials.map(testimonial => (
       <article key={v4()} className="message">
@@ -14,6 +15,7 @@ const Testimonials = ({ testimonials }) => (
       </article>
     ))}
   </div>
+  
 )
 
 Testimonials.propTypes = {
