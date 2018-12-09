@@ -43,13 +43,12 @@
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-serve": "npm run build && npm run serve"
   },
   "devDependencies": {
-    "connect": "^3.6.6",
     "prettier": "^1.7.4",
-    "rimraf": "^2.6.2",
-    "serve-static": "^1.13.2"
+    "rimraf": "^2.6.2"
   },
   "repository": {
     "type": "git",

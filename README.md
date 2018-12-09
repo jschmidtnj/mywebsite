@@ -1,4 +1,4 @@
-# Gatsby + Netlify Website
+# My Website
 
 ## Notes
 
