@@ -5,6 +5,9 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
+        <Helmet>
+          <link rel="canonical" href={`Home`} /> // ⚡ Add canonical
+        </Helmet>
         <section className="section">
           <div className="container">
             <div className="content">

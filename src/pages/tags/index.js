@@ -10,7 +10,9 @@ const TagsPage = ({
   
   <Layout>
     <section className="section">
-      <Helmet title={`Tags | ${title}`} />
+      <Helmet title={`Tags | ${title}`}>
+        <link rel="canonical" href={`Tags`} /> // ⚡ Add canonical
+      </Helmet>
       <div className="container content">
         <div className="columns">
           <div
