@@ -13,6 +13,7 @@ export default class ProjectPage extends React.Component {
       
       <Layout>
         <Helmet title={`Projects`}>
+          <link rel="amphtml" href={`amp/projects`} />
           <link rel="canonical" href={`Projects`} /> // ⚡ Add canonical
         </Helmet>
         <section className="section">

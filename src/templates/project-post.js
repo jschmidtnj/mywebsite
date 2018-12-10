@@ -71,6 +71,7 @@ const ProjectPost = ({ data }) => {
           >
             <title>{`${post.frontmatter.title}`}</title>
             <meta name="description" content={`${post.frontmatter.description}`} />
+            <link rel="amphtml" href={`amp/${post.fields.slug}`} />
             <link rel="canonical" href={`${post.fields.slug}`} /> // ⚡ Add canonical
           </Helmet>
         }

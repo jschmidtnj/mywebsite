@@ -11,6 +11,7 @@ const TagsPage = ({
   <Layout>
     <section className="section">
       <Helmet title={`Tags | ${title}`}>
+        <link rel="amphtml" href={`amp/tags`} />
         <link rel="canonical" href={`Tags`} /> // ⚡ Add canonical
       </Helmet>
       <div className="container content">

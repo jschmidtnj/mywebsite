@@ -39,8 +39,9 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <Helmet title={`About`}>
-          <link rel="canonical" href={`About`} /> // ⚡ Add canonical
-        </Helmet>
+        <link rel="amphtml" href={`amp/about`} />
+        <link rel="canonical" href={`About`} /> // ⚡ Add canonical
+      </Helmet>
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
