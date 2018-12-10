@@ -69,9 +69,9 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify',
       options: {
         allPageHeaders: [
-          "Content-Security-Policy: Content-Security-Policy: default-src 'none'; object-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; report-uri https://joshuaschmidt.report-uri.com/r/d/csp/enforce;",
-          "Referrer-Policy: origin",
-          "Feature-Policy: vibrate 'self'; usermedia *; notifications *; sync-xhr 'self' https:",
+          "Content-Security-Policy: default-src 'none'; object-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; report-uri https://joshuaschmidt.report-uri.com/r/d/csp/enforce;",
+          "Referrer-Policy: same-origin",
+          "Feature-Policy: vibrate 'self'; notifications *; sync-xhr 'self' https:",
         ],
       },
     },
