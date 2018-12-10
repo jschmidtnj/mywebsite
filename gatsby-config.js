@@ -92,10 +92,45 @@ module.exports = {
     'gatsby-plugin-offline',
     { // AMP.
       resolve: 'gatsby-plugin-html2amp',
+      gaConfigPath: 'gaConfig.json',
       options: {
         files: ['*.html', '/blog/*.html', '/about/*.html', '/404/*.html', '/blog/*.html', '/projects/*.html', '/tags/*.html',],
         dist: 'public/amp'
       }
-    }
+    },
+    { // Analytics - Google Tag Manager
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: "GTM-MW49JXT",
+  
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+  
+        // Specify optional GTM environment details.
+        // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING",
+        // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME",
+      },
+    },
+    { // Analytics
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-130784084-1",
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        // exclude: ["/preview/**", "/do-not-track/me/too/"],
+        // Enables Google Optimize using your container Id
+        optimizeId: "GTM-KXJPQJV", // https://optimize.google.com
+        // Any additional create only fields (optional)
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "fervent-rosalind-1441e9.netlify.com",
+      },
+    },
   ],
 }
