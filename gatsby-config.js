@@ -72,8 +72,23 @@ module.exports = {
           "Content-Security-Policy: object-src 'none'; font-src 'self'; report-uri https://joshuaschmidt.report-uri.com/r/d/csp/enforce;",
           "Referrer-Policy: same-origin",
           "Feature-Policy: camera 'none'; geolocation 'none';",
+          "Cache-Control = 'public, max-age=604800'",
         ],
       },
     },
+    { // PWA STUFF
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Joshua Schmidt',
+        short_name: 'Joshua',
+        start_url: '/',
+        background_color: '#f7f0eb',
+        theme_color: '#a2466c',
+        display: 'minimal-ui',
+        icon: 'static/img/app_icon_512.png', // This path is relative to the root of the site.
+        legacy: true, // for apple touch icons < iOS 11.3
+      },
+    },
+    'gatsby-plugin-offline',
   ],
 }

@@ -2,7 +2,7 @@
 
 ## Notes
 
-use vs code jsx extension (look it up) for syntax highlighting. disable jshint because it doesn't work (as of Dec 7 2018).
+use vs code jsx extension (look it up) for syntax highlighting. disable jshint because it doesn't work (as of Dec 7 2018). https://report-uri.com/. https://securityheaders.com/. https://developers.google.com/speed/pagespeed/insights/. https://www.pingdom.com/. https://developers.google.com/web/tools/lighthouse/#devtools.
 
 **Note:** This starter uses the [Gatsby v2 Beta](https://www.gatsbyjs.org/blog/2018-06-16-announcing-gatsby-v2-beta-launch/).
 
