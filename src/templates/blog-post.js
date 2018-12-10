@@ -71,6 +71,7 @@ const BlogPost = ({ data }) => {
           >
             <title>{`${post.frontmatter.title}`}</title>
             <meta name="description" content={`${post.frontmatter.description}`} />
+            <link rel="canonical" href={`${post.fields.slug}`} /> // ⚡ Add canonical
           </Helmet>
         }
         tags={post.frontmatter.tags}
@@ -89,11 +90,15 @@ BlogPost.propTypes = {
 
 export default BlogPost
 
+// ⚡ Add this fields.slug into Graphql for AMP
 export const blogPageQuery = graphql`
   query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

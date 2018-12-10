@@ -71,6 +71,7 @@ const ProjectPost = ({ data }) => {
           >
             <title>{`${post.frontmatter.title}`}</title>
             <meta name="description" content={`${post.frontmatter.description}`} />
+            <link rel="canonical" href={`${post.fields.slug}`} /> // ⚡ Add canonical
           </Helmet>
         }
         tags={post.frontmatter.tags}
@@ -89,11 +90,15 @@ ProjectPost.propTypes = {
 
 export default ProjectPost
 
+// ⚡ Add this fields.slug into Graphql for AMP
 export const projectPageQuery = graphql`
   query ProjectPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

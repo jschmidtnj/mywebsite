@@ -90,5 +90,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    { // AMP
+      resolve: 'gatsby-plugin-html2amp',
+      options: {
+        files: ['**/*.html'],
+        dist: 'public/amp'
+      }
+    }
   ],
 }

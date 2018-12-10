@@ -6,8 +6,9 @@
   "private": false,
   "dependencies": {
     "bulma": "^0.7.0",
-    "gatsby": "^2.0.0",
+    "gatsby": "^2.0.64",
     "gatsby-image": "^2.0.10",
+    "gatsby-plugin-html2amp": "^0.3.2",
     "gatsby-plugin-manifest": "^2.0.11",
     "gatsby-plugin-netlify": "^2.0.0",
     "gatsby-plugin-netlify-cms": "^3.0.0",
