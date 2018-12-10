@@ -72,7 +72,7 @@ module.exports = {
           "Content-Security-Policy: object-src 'none'; font-src 'self'; report-uri https://joshuaschmidt.report-uri.com/r/d/csp/enforce;",
           "Referrer-Policy: same-origin",
           "Feature-Policy: camera 'none'; geolocation 'none';",
-          "Cache-Control = 'public, max-age=604800'",
+          "Cache-Control: public, max-age=604800",
         ],
       },
     },
