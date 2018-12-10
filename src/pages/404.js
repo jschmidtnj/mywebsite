@@ -6,7 +6,7 @@ const NotFoundPage = () => (
   
   <Layout>
     <Helmet title={`404`}>
-      <link rel="amphtml" href={`amp/404`} />
+      <link rel="amphtml" href={`/amp/404`} />
       <link rel="canonical" href={`404`} /> // ⚡ Add canonical
     </Helmet>
     <div>

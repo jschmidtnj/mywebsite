@@ -7,8 +7,8 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <Helmet title={`Home`}>
-          <link rel="amphtml" href={`amp/`} />
-          <link rel="canonical" href={`Home`} /> // ⚡ Add canonical
+          <link rel="amphtml" href={`/amp/`} />
+          <link rel="canonical" href={`/`} /> // ⚡ Add canonical
         </Helmet>
         <section className="section">
           <div className="container">
