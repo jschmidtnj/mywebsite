@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
@@ -11,6 +12,9 @@ export default class ProjectPage extends React.Component {
     return (
       
       <Layout>
+        <Helmet title={`Projects`}>
+          <link rel="canonical" href={`Projects`} /> // ⚡ Add canonical
+        </Helmet>
         <section className="section">
           <div className="container">
             <div className="content">
