@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
@@ -37,6 +38,9 @@ const AboutPage = ({ data }) => {
   
   return (
     <Layout>
+      <Helmet title={`About`}>
+          <link rel="canonical" href={`About`} /> // ⚡ Add canonical
+        </Helmet>
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}

@@ -1,11 +1,12 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 
 export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <Helmet>
+        <Helmet title={`Home`}>
           <link rel="canonical" href={`Home`} /> // ⚡ Add canonical
         </Helmet>
         <section className="section">
