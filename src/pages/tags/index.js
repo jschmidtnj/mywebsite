@@ -12,7 +12,7 @@ const TagsPage = ({
     <section className="section">
       <Helmet title={`Tags | ${title}`}>
         <link rel="amphtml" href={`/amp/tags`} />
-        <link rel="canonical" href={`/tags`} /> // ⚡ Add canonical
+        <link rel="canonical" href={`/tags`} /> {/*⚡ Add canonical */}
       </Helmet>
       <div className="container content">
         <div className="columns">

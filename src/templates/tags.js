@@ -28,7 +28,7 @@ class TagRoute extends React.Component {
         <section className="section">
           <Helmet title={`${tag} | ${title}`}>
             <link rel="amphtml" href={`amp/tags/${tag}`} />
-            <link rel="canonical" href={`tags/${tag}`} /> // ⚡ Add canonical
+            <link rel="canonical" href={`tags/${tag}`} /> {/*⚡ Add canonical */}
           </Helmet>
           <div className="container content">
             <div className="columns">

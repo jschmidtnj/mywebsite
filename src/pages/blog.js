@@ -14,7 +14,7 @@ export default class BlogPage extends React.Component {
       <Layout>
         <Helmet title={`Blog`}>
           <link rel="amphtml" href={`/amp/blog`} />
-          <link rel="canonical" href={`Blog`} /> // ⚡ Add canonical
+          <link rel="canonical" href={`Blog`} /> {/*⚡ Add canonical */}
         </Helmet>
         <section className="section">
           <div className="container">

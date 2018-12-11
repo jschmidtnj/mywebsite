@@ -72,7 +72,7 @@ const BlogPost = ({ data }) => {
             <title>{`${post.frontmatter.title}`}</title>
             <meta name="description" content={`${post.frontmatter.description}`} />
             <link rel="amphtml" href={`/amp/blog/${post.fields.slug}`} />
-            <link rel="canonical" href={`/blog/${post.fields.slug}`} /> // ⚡ Add canonical
+            <link rel="canonical" href={`/blog/${post.fields.slug}`} /> {/*⚡ Add canonical */}
           </Helmet>
         }
         tags={post.frontmatter.tags}

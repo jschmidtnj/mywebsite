@@ -14,7 +14,7 @@ export default class ProjectPage extends React.Component {
       <Layout>
         <Helmet title={`Projects`}>
           <link rel="amphtml" href={`/amp/projects`} />
-          <link rel="canonical" href={`/projects`} /> // ⚡ Add canonical
+          <link rel="canonical" href={`/projects`} /> {/*⚡ Add canonical */}
         </Helmet>
         <section className="section">
           <div className="container">

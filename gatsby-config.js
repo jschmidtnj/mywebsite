@@ -105,7 +105,7 @@ module.exports = {
   
         // Include GTM in development.
         // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: false,
+        includeInDevelopment: true,
   
         // Specify optional GTM environment details.
         // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING",
@@ -119,17 +119,17 @@ module.exports = {
         // Puts tracking script in the head instead of the body
         head: false,
         // Setting this parameter is optional
-        anonymize: true,
+        // anonymize: false,
         // Setting this parameter is also optional
-        respectDNT: true,
+        // respectDNT: true,
         // Avoids sending pageview hits from custom paths
         // exclude: ["/preview/**", "/do-not-track/me/too/"],
         // Enables Google Optimize using your container Id
         optimizeId: "GTM-KXJPQJV", // https://optimize.google.com
         // Any additional create only fields (optional)
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: "fervent-rosalind-1441e9.netlify.com",
+        // sampleRate: 5,
+        // siteSpeedSampleRate: 10,
+        // cookieDomain: "",
       },
     },
   ],
