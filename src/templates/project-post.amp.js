@@ -6,7 +6,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const ProjectPostTemplate = ({
+export const ProjectPostAmpTemplate = ({
   content,
   contentComponent,
   description,
@@ -48,7 +48,7 @@ export const ProjectPostTemplate = ({
   
 }
 
-ProjectPostTemplate.propTypes = {
+ProjectPostAmpTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -56,12 +56,12 @@ ProjectPostTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const ProjectPost = ({ data }) => {
+const ProjectPostAmp = ({ data }) => {
   const { markdownRemark: post } = data
   
   return (
     <Layout>
-      <ProjectPostTemplate
+      <ProjectPostAmpTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
@@ -71,8 +71,6 @@ const ProjectPost = ({ data }) => {
           >
             <title>{`${post.frontmatter.title}`}</title>
             <meta name="description" content={`${post.frontmatter.description}`} />
-            {/*<link rel="amphtml" href={`amp/projects/${post.fields.slug}`} />
-            <link rel="canonical" href={`/projects/${post.fields.slug}`} />*/} {/*⚡ Add canonical */}
           </Helmet>
         }
         tags={post.frontmatter.tags}
@@ -83,17 +81,17 @@ const ProjectPost = ({ data }) => {
   
 }
 
-ProjectPost.propTypes = {
+ProjectPostAmp.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default ProjectPost
+export default ProjectPostAmp
 
 // ⚡ Add this fields.slug into Graphql for AMP
-export const projectPageQuery = graphql`
-  query ProjectPostByID($id: String!) {
+export const projectPageAmpQuery = graphql`
+  query ProjectPostAmpByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html

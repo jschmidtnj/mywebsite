@@ -130,6 +130,7 @@ module.exports = {
       }
     },
     "gatsby-plugin-sitemap", // sitemap for SEO
+    /* // This doesn't seem to be working well. Going to use the other plugin instead.
     {
       // AMP.
       resolve: "gatsby-plugin-amp-generator",
@@ -145,6 +146,34 @@ module.exports = {
           "/tags/*.html"
         ],
         dist: "public/amp"
+      }
+    }
+    */
+    {
+      //AMP :: see https://github.com/jafaircl/gatsby-plugin-amp on how to set this up
+      resolve: "gatsby-plugin-amp",
+      options: {
+        /*
+      analytics: {
+        type: 'gtag',
+        dataCredentials: 'include',
+        config: {
+          vars: {
+            gtag_id: <GA_TRACKING_ID>,
+            config: {
+              <GA_TRACKING_ID>: {
+                page_location: '{{pathname}}'
+              },
+            },
+          },
+        },
+      },*/
+        canonicalBaseUrl: "https://fervent-rosalind-1441e9.netlify.com/",
+        components: ["amp-form"],
+        excludedPaths: [],
+        pathIdentifier: "/amp/",
+        relAmpHtmlPattern: "{{canonicalBaseUrl}}{{pathname}}{{pathIdentifier}}",
+        useAmpClientIdApi: true,
       }
     }
   ]

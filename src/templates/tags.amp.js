@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
-class TagRoute extends React.Component {
+class TagRouteAmp extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map(post => (
@@ -27,8 +27,6 @@ class TagRoute extends React.Component {
       <Layout>
         <section className="section">
           <Helmet title={`${tag} | ${title}`}>
-            {/*<link rel="amphtml" href={`amp/tags/${tag}`} />
-            <link rel="canonical" href={`tags/${tag}`} />*/} {/*⚡ Add canonical */}
           </Helmet>
           <div className="container content">
             <div className="columns">
@@ -51,10 +49,10 @@ class TagRoute extends React.Component {
   }
 }
 
-export default TagRoute
+export default TagRouteAmp
 
-export const tagPageQuery = graphql`
-  query TagPage($tag: String) {
+export const tagPageAmpQuery = graphql`
+  query TagPageAmp($tag: String) {
     site {
       siteMetadata {
         title

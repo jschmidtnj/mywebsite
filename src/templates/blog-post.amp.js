@@ -6,7 +6,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const ProjectPostTemplate = ({
+export const BlogPostAmpTemplate = ({
   content,
   contentComponent,
   description,
@@ -48,7 +48,7 @@ export const ProjectPostTemplate = ({
   
 }
 
-ProjectPostTemplate.propTypes = {
+BlogPostAmpTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -56,23 +56,21 @@ ProjectPostTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const ProjectPost = ({ data }) => {
+const BlogPostAmp = ({ data }) => {
   const { markdownRemark: post } = data
   
   return (
     <Layout>
-      <ProjectPostTemplate
+      <BlogPostAmpTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
           <Helmet
-            titleTemplate="%s | Project"
+            titleTemplate="%s | Blog"
           >
             <title>{`${post.frontmatter.title}`}</title>
             <meta name="description" content={`${post.frontmatter.description}`} />
-            {/*<link rel="amphtml" href={`amp/projects/${post.fields.slug}`} />
-            <link rel="canonical" href={`/projects/${post.fields.slug}`} />*/} {/*⚡ Add canonical */}
           </Helmet>
         }
         tags={post.frontmatter.tags}
@@ -83,17 +81,17 @@ const ProjectPost = ({ data }) => {
   
 }
 
-ProjectPost.propTypes = {
+BlogPostAmp.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default ProjectPost
+export default BlogPostAmp
 
 // ⚡ Add this fields.slug into Graphql for AMP
-export const projectPageQuery = graphql`
-  query ProjectPostByID($id: String!) {
+export const blogPageAmpQuery = graphql`
+  query BlogPostAmpByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html

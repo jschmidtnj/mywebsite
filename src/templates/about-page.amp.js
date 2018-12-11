@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageAmpTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
   
   return (
@@ -27,22 +27,20 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   
 }
 
-AboutPageTemplate.propTypes = {
+AboutPageAmpTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
-const AboutPage = ({ data }) => {
+const AboutPageAmp = ({ data }) => {
   const { markdownRemark: post } = data
   
   return (
     <Layout>
       <Helmet title={`About`}>
-        {/*<link rel="amphtml" href={`/amp/about`} />
-        <link rel="canonical" href={`/about`} />*/} {/*⚡ Add canonical */}
       </Helmet>
-      <AboutPageTemplate
+      <AboutPageAmpTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
@@ -52,14 +50,14 @@ const AboutPage = ({ data }) => {
   
 }
 
-AboutPage.propTypes = {
+AboutPageAmp.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default AboutPage
+export default AboutPageAmp
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const aboutPageAmpQuery = graphql`
+  query AboutPageAmp($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
