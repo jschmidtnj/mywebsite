@@ -1,3 +1,5 @@
 # Redirect with a 301
 /home       /               301
-/*/amp      /amp/:splat     301
+
+# redirect needed for other amp implementation
+#/*/amp      /amp/:splat     301

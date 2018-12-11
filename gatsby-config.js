@@ -172,7 +172,7 @@ module.exports = {
         components: ["amp-form"],
         excludedPaths: [],
         pathIdentifier: "/amp/",
-        relAmpHtmlPattern: "{{canonicalBaseUrl}}{{pathname}}{{pathIdentifier}}",
+        relAmpHtmlPattern: "{{canonicalBaseUrl}}{{pathname}}",
         useAmpClientIdApi: true,
       }
     }
