@@ -4,6 +4,8 @@
 
 use vs code jsx extension (look it up) for syntax highlighting. disable jshint because it doesn't work (as of Dec 7 2018). https://report-uri.com/. https://securityheaders.com/. https://developers.google.com/speed/pagespeed/insights/. https://www.pingdom.com/. https://developers.google.com/web/tools/lighthouse/#devtools.
 
+analytics: https://search.google.com/u/1/search-console, https://analytics.google.com/analytics/web/provision, https://tagmanager.google.com/, https://optimize.google.com/optimize/home/
+
 **Note:** This starter uses the [Gatsby v2 Beta](https://www.gatsbyjs.org/blog/2018-06-16-announcing-gatsby-v2-beta-launch/).
 
 This repo contains an example business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://gatsby-netlify-cms.netlify.com/)**.

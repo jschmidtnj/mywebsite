@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Joshua Schmidt',
+    siteUrl: 'https://fervent-rosalind-1441e9.netlify.com/',
     description: 'This blog / portfolio website was built with Gatsby, and Netlify CMS. It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
   },
   plugins: [
@@ -132,5 +133,6 @@ module.exports = {
         // cookieDomain: "",
       },
     },
+    'gatsby-plugin-sitemap', // sitemap for SEO
   ],
 }
