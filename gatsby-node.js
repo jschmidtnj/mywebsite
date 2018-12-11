@@ -82,7 +82,7 @@ exports.createPages = ({ actions, graphql }) => {
 
       createPage({
         path: tagPath + "/amp",
-        component: path.resolve(`src/templates/tags.js`),
+        component: path.resolve(`src/templates/tags.amp.js`),
         context: {
           tag
         }

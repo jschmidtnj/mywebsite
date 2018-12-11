@@ -1,0 +1,36 @@
+{
+  "name": "gatsby-plugin-fix-amp-css",
+  "version": "0.3.2",
+  "description": "Gatsby plugin to remove !important from HTMl",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint *.js",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jschmidtnj/mywebsite.git"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "amp"
+  ],
+  "author": "Joshua Schmidt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jschmidtnj/mywebsite/issues"
+  },
+  "homepage": "https://github.com/jschmidtnj/mywebsite#readme",
+  "dependencies": {
+    "replace-in-file": "^3.4.2"
+  },
+  "devDependencies": {
+    "eslint": "5.9.0",
+    "eslint-config-standard": "12.0.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-node": "8.0.0",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-standard": "4.0.0"
+  }
+}

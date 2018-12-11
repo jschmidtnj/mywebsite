@@ -130,7 +130,7 @@ module.exports = {
       }
     },
     "gatsby-plugin-sitemap", // sitemap for SEO
-    /* // This doesn't seem to be working well. Going to use the other plugin instead.
+    // This is working but not quite perfectly. Using plugin below instead.
     {
       // AMP.
       resolve: "gatsby-plugin-amp-generator",
@@ -147,8 +147,7 @@ module.exports = {
         ],
         dist: "public/amp"
       }
-    }
-    */
+    },
     {
       //AMP :: see https://github.com/jafaircl/gatsby-plugin-amp on how to set this up
       resolve: "gatsby-plugin-amp",
@@ -176,6 +175,7 @@ module.exports = {
         relCanonicalPattern: "{{canonicalBaseUrl}}{{pathname}}",
         useAmpClientIdApi: true,
       }
-    }
+    },
+    "gatsby-plugin-fix-amp-css",
   ]
 };
