@@ -1,7 +1,7 @@
 
-# gatsby-plugin-html2amp
+# gatsby-plugin-amp-generator
 
-Create AMP(Accelerated Mobile Pages) for your Gatsby site by using [html2amp](https://github.com/tomoyukikashiro/html2amp)
+Create AMP(Accelerated Mobile Pages) for your Gatsby site by using [amplify](https://github.com/rkazakov/ampify)
 
 ## Install
 
@@ -14,7 +14,7 @@ $ npm install --save gatsby-plugin-html2amp
 In gatsby-config.js
 ```js
 {
-  resolve: 'gatsby-plugin-html2amp',
+  resolve: 'gatsby-plugin-amp-generator',
   options: {
     files: ['post/**/index.html', 'index.html'],
     publicPath: 'public',
