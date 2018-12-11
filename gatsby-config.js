@@ -171,8 +171,9 @@ module.exports = {
         canonicalBaseUrl: "https://fervent-rosalind-1441e9.netlify.com/",
         components: ["amp-form"],
         excludedPaths: [],
-        pathIdentifier: "/amp/",
-        relAmpHtmlPattern: "{{canonicalBaseUrl}}{{pathname}}",
+        pathIdentifier: "/amp",
+        relAmpHtmlPattern: "{{canonicalBaseUrl}}{{pathname}}{{pathIdentifier}}",
+        relCanonicalPattern: "{{canonicalBaseUrl}}{{pathname}}",
         useAmpClientIdApi: true,
       }
     }
