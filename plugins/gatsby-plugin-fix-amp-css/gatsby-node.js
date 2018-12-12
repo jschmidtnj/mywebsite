@@ -7,8 +7,8 @@ exports.onPostBuild = (_, pluginOptions) => {
   const { files } = { ...defaultOptions, ...pluginOptions };
   const options = {
     files: files,
-    from: /!important/g,
-    to: ""
+    from: [/!important/g, /<iframe/g, /<\/iframe>/g],
+    to: ["", "<amp-iframe", "</amp-iframe>"]
   };
   try {
     const changes = replace.sync(options);

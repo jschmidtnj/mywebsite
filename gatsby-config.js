@@ -168,7 +168,7 @@ module.exports = {
         },
       },*/
         canonicalBaseUrl: "https://fervent-rosalind-1441e9.netlify.com/",
-        components: ["amp-form"],
+        components: ["amp-form", "amp-iframe"],
         excludedPaths: [],
         pathIdentifier: "/amp",
         relAmpHtmlPattern: "{{canonicalBaseUrl}}{{pathname}}{{pathIdentifier}}",
