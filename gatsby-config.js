@@ -131,7 +131,7 @@ module.exports = {
     },
     "gatsby-plugin-sitemap", // sitemap for SEO
     // This is working but not quite perfectly. Using plugin below instead.
-    {
+    /*{
       // AMP.
       resolve: "gatsby-plugin-amp-generator",
       gaConfigPath: "gaConfig.json",
@@ -147,7 +147,7 @@ module.exports = {
         ],
         dist: "public/amp"
       }
-    },
+    },*/
     {
       //AMP :: see https://github.com/jafaircl/gatsby-plugin-amp on how to set this up
       resolve: "gatsby-plugin-amp",
@@ -173,9 +173,9 @@ module.exports = {
         pathIdentifier: "/amp",
         relAmpHtmlPattern: "{{canonicalBaseUrl}}{{pathname}}{{pathIdentifier}}",
         relCanonicalPattern: "{{canonicalBaseUrl}}{{pathname}}",
-        useAmpClientIdApi: true,
+        useAmpClientIdApi: true
       }
     },
-    "gatsby-plugin-fix-amp-css",
+    "gatsby-plugin-fix-amp-css"
   ]
 };

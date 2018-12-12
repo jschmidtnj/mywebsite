@@ -1,13 +1,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Layout from '../components/Layout'
+import Layout from '../../components/Layout'
 
-const NotFoundPageAmp = () => (
+const NotFoundPage = () => (
   
   <Layout>
     <Helmet title={`404`}>
-      {/*<link rel="amphtml" href={`/amp/404`} />
-      <link rel="canonical" href={`404`} />*/} {/*⚡ Add canonical */}
     </Helmet>
     <div>
       <h1>NOT FOUND</h1>
@@ -17,4 +15,4 @@ const NotFoundPageAmp = () => (
   
 )
 
-export default NotFoundPageAmp
+export default NotFoundPage

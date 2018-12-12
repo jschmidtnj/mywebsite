@@ -6,6 +6,8 @@ use vs code jsx extension (look it up) for syntax highlighting. disable jshint b
 
 analytics: https://search.google.com/u/1/search-console, https://analytics.google.com/analytics/web/provision, https://tagmanager.google.com/, https://optimize.google.com/optimize/home/  
 
+Created seperate pages for amp, and will not automatically generate them because each page has a seperate query that requires a different name for the query. You cannot use the same name for more than one query, or you get an error.
+
 update google amp cache: https://ampbyexample.com/advanced/using_the_google_amp_cache/  
 
 **Note:** This starter uses the [Gatsby v2 Beta](https://www.gatsbyjs.org/blog/2018-06-16-announcing-gatsby-v2-beta-launch/).
