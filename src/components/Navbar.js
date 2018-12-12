@@ -42,6 +42,7 @@ const Navbar = class extends React.Component {
           <span></span>
           <span></span>
           <span></span>
+          <span></span>
         </div>
       </div>
       <div id="navMenu" className="navbar-menu">
