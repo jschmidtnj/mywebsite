@@ -152,8 +152,7 @@ module.exports = {
       //AMP :: see https://github.com/jafaircl/gatsby-plugin-amp on how to set this up
       resolve: "gatsby-plugin-amp",
       options: {
-        /*
-      analytics: {
+      /*analytics: {
         type: 'gtag',
         dataCredentials: 'include',
         config: {
@@ -168,7 +167,7 @@ module.exports = {
         },
       },*/
         canonicalBaseUrl: "https://fervent-rosalind-1441e9.netlify.com/",
-        components: ["amp-form", "amp-iframe"],
+        components: ["amp-form", "amp-iframe", "amp-sidebar", "amp-accordion"],
         excludedPaths: [],
         pathIdentifier: "/amp",
         relAmpHtmlPattern: "{{canonicalBaseUrl}}{{pathname}}{{pathIdentifier}}",

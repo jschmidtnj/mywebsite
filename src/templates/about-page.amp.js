@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import Layout from '../components/Layout.amp'
 import Content, { HTMLContent } from '../components/Content'
 
 export const AboutPageAmpTemplate = ({ title, content, contentComponent }) => {
